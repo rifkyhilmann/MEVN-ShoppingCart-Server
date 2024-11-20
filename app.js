@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
     res.send("Hello World")
 })
 
+require('./app/routes/product.routes')(app)
+require('./app/routes/order.routes')(app)
+
 app.listen(PORT, () => {
     console.log(`listening on ${PORT}`);
 })
