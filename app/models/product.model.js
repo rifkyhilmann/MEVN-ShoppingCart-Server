@@ -1,4 +1,4 @@
-const { mongoose } = require(".");
+
 
 module.exports = mongoose => {
     // Definisi schema
