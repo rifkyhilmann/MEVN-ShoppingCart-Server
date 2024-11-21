@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const PORT = 5000;
 
 const db = require('./app/models');
@@ -17,6 +18,7 @@ db.mongoose
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/img', express.static(path.join(__dirname, './public/img')));
 
 app.get('/', (req, res) => {
     res.send("Hello World")
